@@ -1,0 +1,31 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: binary-mlops-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./models:/app/models
+      - ./mlruns:/app/mlruns
+      - ./artifacts:/app/artifacts
+      - ./data:/app/data
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: binary-mlops-dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    volumes:
+      - ./models:/app/models
+      - ./artifacts:/app/artifacts

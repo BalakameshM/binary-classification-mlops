@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.git/
+.gitignore
+
+tests/
+.mlflow/
+artifacts/
+models/
+data/
+
+*.log
+.DS_Store

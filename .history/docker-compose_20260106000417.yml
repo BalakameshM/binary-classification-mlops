@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      # optional if your API reads this
+      # - MODEL_RUN_ID=...
+    volumes:
+      # optional: if you want to mount local models
+      # - ./models:/app/models
+      - ./mlruns:/app/mlruns
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+    depends_on:
+      - api

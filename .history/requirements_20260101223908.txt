@@ -1,0 +1,81 @@
+# =========================
+# Core Python & Utilities
+# =========================
+python-dotenv==1.0.1
+pydantic==2.6.4
+PyYAML==6.0.1
+loguru==0.7.2
+tqdm==4.66.2
+
+# =========================
+# Data Handling
+# =========================
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+
+# =========================
+# Visualization (EDA + Reports)
+# =========================
+matplotlib==3.8.3
+seaborn==0.13.2
+plotly==5.19.0
+
+# =========================
+# Machine Learning
+# =========================
+scikit-learn==1.4.1.post1
+xgboost==2.0.3
+imbalanced-learn==0.12.0
+joblib==1.3.2
+
+# =========================
+# Hyperparameter Tuning
+# =========================
+optuna==3.6.1
+
+# =========================
+# Model Tracking & Experimentation
+# =========================
+mlflow==2.11.3
+
+# =========================
+# Drift Detection & Monitoring
+# =========================
+evidently==0.4.17
+river==0.21.0
+
+# =========================
+# API (FastAPI Inference Service)
+# =========================
+fastapi==0.110.0
+uvicorn==0.29.0
+
+# =========================
+# Dashboard (Optional but Interview-Strong)
+# =========================
+streamlit==1.32.2
+
+# =========================
+# Cloud & Storage
+# =========================
+boto3==1.34.51
+s3fs==2024.3.1
+
+# =========================
+# Spark (Optional – used only when needed)
+# =========================
+pyspark==3.5.1
+
+# =========================
+# Testing
+# =========================
+pytest==8.1.1
+pytest-cov==4.1.0
+httpx==0.27.0
+
+# =========================
+# Packaging / Build
+# =========================
+setuptools>=68.0.0
+wheel>=0.42.0

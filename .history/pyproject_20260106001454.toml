@@ -1,0 +1,20 @@
+[project]
+dependencies = [
+  "pandas",
+  "numpy",
+  "scikit-learn",
+  "joblib",
+  "pyarrow",
+  "mlflow",
+  "optuna"
+]
+
+[project.optional-dependencies]
+api = [
+  "fastapi",
+  "uvicorn[standard]"
+]
+
+dashboard = [
+  "streamlit"
+]

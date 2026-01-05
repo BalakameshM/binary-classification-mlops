@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.log
+
+data/
+artifacts/
+models/
+mlruns/
+
+.DS_Store
+.vscode/
+.idea/
+pytest_cache/
+coverage.xml
+htmlcov/
